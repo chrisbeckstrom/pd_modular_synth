@@ -12,6 +12,10 @@ _I'm not 100% sure how you tell your PD to use the folder.. will add more later 
 
 check out `notes.md` for more info about the approach and philosophy. Basically the modular operates using "cv" (audio between -1 and 1).
 
+# Caveats
+
+I'm no PD expert! I'm sure I'm doing plenty of things in very strange ways. That said, overall this stuff works, and that's all I really want. If you know a better way to do something, let me know! Or better yet, contribute!
+
 -Chris
 
 
