@@ -1,9 +1,9 @@
-#N canvas 907 128 765 763 10;
+#N canvas 675 51 765 763 10;
 #X obj 368 27 inlet~ cv;
 #X obj 267 556 outlet~;
 #X obj 185 26 inlet~ input;
 #X obj 262 329 *~;
-#X obj 102 128 cnv 15 70 100 empty empty empty 20 12 0 14 -257825 -66577
+#X obj 102 127 cnv 15 68 104 empty empty empty 20 12 0 14 -3969 -66577
 0;
 #X text 102 98 in;
 #X text 149 102 cv;
