@@ -1,0 +1,8 @@
+#N canvas 0 22 645 670 10;
+#X obj 203 15 inlet~;
+#X obj 209 172 outlet~;
+#X text 110 116 ## INVERT ##;
+#X obj 224 120 *~ -1;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 100 50 2 100 100;

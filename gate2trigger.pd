@@ -1,0 +1,24 @@
+#N canvas 19 22 609 644 10;
+#X obj 0 106 cnv 15 100 90 empty empty empty 20 12 0 14 -207232 -66577
+0;
+#X obj 217 278 sig~;
+#X msg 235 233 0;
+#X obj 121 167 bng 15 50 10 0 empty empty empty 17 7 0 10 -128992 -4034
+-1;
+#X obj 201 -4 inlet~ in;
+#X obj 214 327 outlet~ out;
+#X text 10 99 in;
+#X text 2 180 out;
+#X text 7 120 # GATE->TRIG #;
+#X msg 174 197 2;
+#X obj 233 201 delay 2;
+#X obj 176 137 threshold~ 0.1 0.1 1 1;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 9 0;
+#X connect 3 0 10 0;
+#X connect 4 0 11 0;
+#X connect 9 0 1 0;
+#X connect 10 0 2 0;
+#X connect 11 0 3 0;
+#X coords 0 -1 1 1 100 100 2 0 100;
