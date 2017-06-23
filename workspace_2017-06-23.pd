@@ -16,7 +16,7 @@
 #X obj 1081 586 learn_midi;
 #X obj 23 89 mixer;
 #X obj 382 521 random_switch;
-#X obj 383 620 karplus;
+#X obj 383 613 karplus;
 #X obj 152 -154 vca;
 #X obj -145 85 vco;
 #X obj 472 308 fold;
@@ -28,3 +28,4 @@
 #X obj 691 273 manual_gate;
 #X obj 234 -234 wavetable;
 #X obj -141 523 gate_seq;
+#X obj 155 728 link;
