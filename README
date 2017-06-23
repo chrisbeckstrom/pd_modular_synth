@@ -2,6 +2,8 @@
 
 I love modular synthesis. I love Pure Data. Why build yet another modular synth in PD? Because why not!
 
+I built a physical, mostly-analog modular synthesizer (more here: <http://chrisbeckstrom.com/main/the-modular>) and use this software modular for more sound sources and to test out ideas before I build real-world circuits. 
+
 # How to use this stuff
 
 Each module exists as a PD abstraction. To use a module, create a new PD file and instantiate the abstraction. For instance, if you want to use the `adsr` module, make sure your PD is configured to use the `pd_modular_synth` as a folder for patches and create an object called `adsr`. That should do it!
