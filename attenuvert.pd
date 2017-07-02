@@ -1,0 +1,73 @@
+#N canvas 495 22 899 704 10;
+#X obj 115 -102 cnv 15 126 132 empty empty empty 20 12 0 14 -2341 -66577
+0;
+#X obj 415 51 *~;
+#X obj 430 -136 / 127;
+#X obj 430 -114 * 2;
+#X obj 430 -92 - 1;
+#X obj 430 -70 t f f;
+#X obj 430 -48 pack 0 50;
+#X obj 430 -26 line~;
+#X floatatom 134 11 5 0 0 0 - - -, f 5;
+#X obj 412 -167 inlet~;
+#X obj 416 278 outlet~;
+#X obj 431 78 / 127;
+#X obj 416 215 +~;
+#X obj 416 237 clip~ -1 1;
+#X obj 431 100 * 2;
+#X obj 431 122 - 1;
+#X obj 431 144 t f f;
+#X obj 431 166 pack 0 50;
+#X obj 431 188 line~;
+#X floatatom 191 10 5 0 0 0 - - -, f 5;
+#X obj 550 -20 inlet~;
+#X obj 430 -4 +~;
+#X obj 430 18 clip~ -1 1;
+#X obj 139 -81 vsl 15 80 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6150 1;
+#X obj 193 -81 vsl 15 80 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6900 1;
+#X obj 119 -44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 216 -46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 75 -44 63;
+#X msg 255 -49 63;
+#X text 114 -118 in;
+#X text 115 29 out;
+#X text 147 -118 ## ATTENUVERTER;
+#X text 183 -102 offset;
+#X text 131 -102 level;
+#X text 156 -46 0;
+#X text 156 -84 +;
+#X text 156 -11 -;
+#X text 35 494 basically copied and pasted from the fantastic automatonism
+https://www.automatonism.com;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 21 0;
+#X connect 9 0 1 0;
+#X connect 11 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 1 19 0;
+#X connect 17 0 18 0;
+#X connect 18 0 12 1;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 1 1;
+#X connect 23 0 2 0;
+#X connect 24 0 11 0;
+#X connect 25 0 27 0;
+#X connect 26 0 28 0;
+#X connect 27 0 23 0;
+#X connect 28 0 24 0;
+#X coords 0 -1 1 1 128 164 2 114 -118;
