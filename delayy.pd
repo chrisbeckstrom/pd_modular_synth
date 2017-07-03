@@ -1,4 +1,4 @@
-#N canvas 97 22 1314 815 10;
+#N canvas 97 22 1314 792 10;
 #X obj 101 108 cnv 15 148 180 empty empty empty 20 12 0 14 -22841 -66577
 0;
 #X obj 553 4 inlet~ time;
@@ -6,7 +6,7 @@
 #X obj 857 3 inlet~ q;
 #X obj 386 682 outlet~ out;
 #X obj 148 165 vsl 20 100 60 15000 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 5900 1;
+-262144 -1 -1 7400 1;
 #X obj 518 408 bp~, f 17;
 #X text 335 82 INPUT;
 #X text 476 531 OUT;
@@ -19,17 +19,17 @@
 #X obj 281 530 clip~ -1 1;
 #X text 481 235 time;
 #X text 244 442 brick wall limiter;
-#X obj 112 165 vsl 20 100 -90 300 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6800 1;
+#X obj 112 165 vsl 20 100 -100 300 0 0 empty empty empty 0 -9 0 10
+-262144 -1 -1 950 1;
 #X floatatom 112 327 5 0 0 0 - - -, f 5;
-#X obj 315 31 inlet~ in;
+#X obj 301 -1 inlet~ in;
 #X obj 655 314 loadbang;
 #X msg 42 33 1000;
 #X obj 54 -1 loadbang;
 #X text 108 139 time;
 #X text 150 140 fq;
 #X obj 184 166 vsl 20 100 6 -3 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7800 1;
+-1 -1 4800 1;
 #X text 192 141 Q;
 #X text 101 283 out;
 #X text 102 101 in;
@@ -76,8 +76,8 @@
 #X floatatom 428 335 5 0 0 0 - - -, f 5;
 #X obj 476 285 pack 0 60;
 #X obj 221 166 vsl 20 100 0 0.55 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5200 1;
-#X obj 507 506 *~;
+-1 -1 9900 1;
+#X obj 541 492 *~;
 #X obj 543 462 lop~ 18000;
 #X msg 654 362 1;
 #X obj 737 469 clip 0 0.5;

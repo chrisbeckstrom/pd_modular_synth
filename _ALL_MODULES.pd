@@ -1,4 +1,4 @@
-#N canvas 644 22 883 792 10;
+#N canvas 0 22 1440 792 10;
 #X obj 700 791 delayy;
 #X obj 1034 445 scope;
 #X obj 972 213 comparator;
@@ -37,3 +37,15 @@
 #X obj 974 105 flipflop;
 #X text 976 82 LOGIC;
 #X text 240 415 VCA/MIXING/etc;
+#X obj 812 1124 reverb;
+#X obj 633 1668 dac~;
+#X obj 420 1067 vco;
+#X obj 327 642 clock;
+#X obj 517 819 vco;
+#X obj 694 1057 noise~;
+#X connect 4 0 38 0;
+#X connect 38 0 39 0;
+#X connect 38 1 39 1;
+#X connect 40 0 4 0;
+#X connect 41 0 24 0;
+#X connect 41 0 19 0;
