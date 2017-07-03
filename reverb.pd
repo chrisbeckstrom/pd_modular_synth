@@ -1,0 +1,4 @@
+#N canvas 746 188 553 510 10;
+#X obj 78 12 inlet~ in;
+#X obj 115 370 outlet~ out;
+#X obj 279 263 freeverb;
