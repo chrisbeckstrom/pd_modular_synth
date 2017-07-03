@@ -4,7 +4,7 @@
 #X obj 340 -14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 73 228 hsl 295 8 0 78017 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 19196 1;
+-1 -1 3742 1;
 #X obj 508 648 outlet~;
 #X obj 561 647 outlet~;
 #X obj 452 18 openpanel;
@@ -193,6 +193,11 @@ colin@loomer.co.uk];
 #X array \$0-sampleloop 78017 float 4 black #0433ff;
 #X coords 0 1 78016 -1 300 200 1;
 #X restore 71 27 graph;
+#X obj 112 -34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 151 -86 s \$0-trig;
+#X obj 713 369 r \$0-trig;
+#X text 80 -37 trig;
 #X connect 1 0 5 0;
 #X connect 5 0 14 0;
 #X connect 6 0 9 0;
@@ -264,4 +269,6 @@ colin@loomer.co.uk];
 #X connect 74 0 64 1;
 #X connect 76 0 77 0;
 #X connect 77 0 73 0;
+#X connect 87 0 88 0;
+#X connect 89 0 52 0;
 #X coords 0 -1 1 1 315 327 2 66 -55;
