@@ -1,10 +1,10 @@
-#N canvas 197 22 1159 792 10;
-#X obj 68 -38 cnv 15 310 288 empty empty empty 20 12 0 14 -4096 -66577
+#N canvas 197 22 955 1027 10;
+#X obj 68 -38 cnv 15 310 288 empty empty empty 20 12 0 14 -191407 -66577
 0;
 #X obj 340 -14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 73 228 hsl 295 8 0 78017 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3742 1;
+-1 -1 0 1;
 #X obj 508 648 outlet~;
 #X obj 561 647 outlet~;
 #X obj 452 18 openpanel;
@@ -172,9 +172,9 @@ colin@loomer.co.uk];
 #X obj 895 -97 metro 1;
 #X obj 867 -23 * 44100;
 #X obj 846 -174 inlet~ range;
-#X text 661 -35;
+#X text 661 -35 comment;
 #X obj 130 -14 hsl 128 15 -352800 352800 0 0 empty empty empty -2 -8
-0 10 -262144 -1 -1 7144 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 791 22 +;
 #X text 76 -14 range;
 #X obj 112 -14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144

@@ -1,9 +1,9 @@
-#N canvas 0 22 1440 763 12;
+#N canvas 961 4 955 1027 12;
 #X text 883 1042 www.pd-tutorial.com;
 #X text 900 1015 Johannes Kreidler;
 #X text 884 977 3.7.2.1. Granular live from http://www.pd-tutorial.com/english/ch03s07.html
 ;
-#X obj 102 110 cnv 15 245 180 empty empty empty 20 12 0 14 -167915
+#X obj 102 123 cnv 15 248 156 empty empty empty 20 12 0 14 -166955
 -66577 0;
 #X obj 425 407 phasor~;
 #X obj 426 587 *~ -1;
@@ -34,10 +34,10 @@
 #X obj 848 626 sig~;
 #X obj 833 491 wrap~;
 #X obj 165 134 vsl 15 128 -990 20000 0 0 empty empty empty 0 -8 0 8
--262144 -1 -1 12700 1;
+-262144 -1 -1 6649 1;
 #X obj 481 227 t b f;
 #X obj 240 132 vsl 15 128 -60 64 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 10800 1;
+-1 -1 6145 1;
 #X obj 488 330 expr (pow(2 \, ($f2/12)) - 1) * (44100/$f1);
 #X text 505 30 30000;
 #X text 451 9 window width;
@@ -45,7 +45,7 @@
 #X text 604 760 make a Hanning window;
 #X text 780 417 spacetime?;
 #X obj 314 131 vsl 15 128 0.1 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6400 1;
+-1 -1 0 1;
 #X floatatom 225 333 5 0 0 0 - - -, f 5;
 #X obj 503 1081 outlet~ out;
 #X obj 580 11 inlet~ window;
@@ -59,7 +59,7 @@
 #X obj 644 81 metro 1;
 #X floatatom 614 156 5 0 0 0 - - -, f 5;
 #X obj 475 819 *~ 1;
-#X text 102 103 in;
+#X text 103 102 in;
 #X text 147 103 window;
 #X text 219 102 pitch;
 #X obj 403 59 +;
@@ -97,7 +97,7 @@
 #X obj 833 457 +~;
 #X obj 430 934 *~;
 #X obj 564 926 *~;
-#X obj 136 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 136 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 291 812 1;
 #X msg 374 812 1;
@@ -108,9 +108,9 @@
 -1 -1;
 #X msg 321 813 0;
 #X msg 411 811 0;
-#X obj 416 897 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 416 897 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 538 890 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 538 890 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 596 870 lop~;
 #X obj 857 881 hsl 128 15 50 12000 0 0 empty empty empty -2 -8 0 10

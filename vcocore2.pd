@@ -1,6 +1,6 @@
-#N canvas 1281 4 635 1027 10;
+#N canvas 961 4 635 1027 10;
 #X obj -4 115 inlet pitch;
-#X obj 357 64 inlet~ pwm;
+#X obj 452 67 inlet~ pwm;
 #X obj 501 183 inlet~ sync;
 #X obj 55 411 osc~;
 #X obj 1 735 outlet~ sine;
@@ -42,7 +42,7 @@
 #X text 496 321 extremes = silence fix PWM so no silence;
 #X obj 448 350 clip~ 0.01 0.99;
 #X obj 276 284 +~;
-#X obj 256 67 inlet pwm_amt;
+#X obj 351 70 inlet pwm_amt;
 #X obj 462 734 outlet led;
 #X floatatom 11 173 5 0 0 0 - - -, f 5;
 #X obj 73 164 snapshot~;
@@ -51,7 +51,7 @@
 1;
 #X obj 73 86 loadbang;
 #X obj 73 141 metro 1;
-#X obj 195 71 inlet~ cv;
+#X obj 231 94 inlet~ cv;
 #X obj 907 318 snapshot~;
 #X obj 933 269 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -78,10 +78,7 @@
 #X floatatom 73 288 5 0 0 0 - - -, f 5;
 #X obj 73 310 mtof;
 #X floatatom 73 332 5 0 0 0 - - -, f 5;
-#X msg 238 217 0;
 #X obj 130 48 inlet midi;
-#X msg 239 156 60;
-#X floatatom 160 192 5 0 0 0 - - -, f 5;
 #X connect 0 0 43 0;
 #X connect 1 0 11 1;
 #X connect 2 0 50 0;
@@ -124,12 +121,12 @@
 #X connect 40 0 27 0;
 #X connect 40 0 3 0;
 #X connect 41 0 11 0;
+#X connect 43 0 40 1;
 #X connect 44 0 45 0;
 #X connect 45 0 66 0;
 #X connect 46 0 48 0;
 #X connect 47 0 46 0;
 #X connect 48 0 44 0;
-#X connect 49 0 44 0;
 #X connect 50 0 53 0;
 #X connect 50 0 63 0;
 #X connect 51 0 64 0;
@@ -157,7 +154,3 @@
 #X connect 69 0 70 0;
 #X connect 70 0 71 0;
 #X connect 72 0 40 0;
-#X connect 73 0 40 1;
-#X connect 73 0 75 0;
-#X connect 74 0 40 1;
-#X connect 75 0 40 1;

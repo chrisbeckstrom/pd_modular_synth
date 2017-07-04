@@ -1,12 +1,12 @@
-#N canvas 641 4 638 1027 10;
+#N canvas 641 4 955 1027 10;
 #X obj 415 443 outlet~ sine;
 #X obj 523 438 outlet~ saw;
 #X obj 607 440 outlet~ rectangle;
 #X obj 747 446 outlet~ tri;
-#X obj 100 105 cnv 15 123 190 empty empty empty 20 12 0 14 -204800
--66577 0;
+#X obj 100 105 cnv 15 123 190 empty empty empty 20 12 0 14 -3136 -66577
+0;
 #X obj 111 169 vsl 30 100 0.1 12000 1 0 empty empty empty 0 -9 0 10
--262017 -258789 -1 2115 1;
+-262017 -258789 -1 7715 1;
 #X text 100 148 freq;
 #X text 100 282 sine;
 #X obj 178 167 vsl 30 100 0 1 0 0 empty empty empty 0 -9 0 10 -262017
@@ -33,7 +33,7 @@
 #X obj 406 412 delread~ \$0-sine;
 #X msg 15 39 60;
 #X obj 338 30 inlet midi_in;
-#X text 101 100 midi;
+#X text 96 82 midi;
 #X connect 5 0 22 0;
 #X connect 8 0 18 0;
 #X connect 8 0 23 2;
