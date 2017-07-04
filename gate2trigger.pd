@@ -1,9 +1,9 @@
-#N canvas 19 22 609 644 10;
+#N canvas 19 22 955 1027 10;
 #X obj 0 106 cnv 15 100 90 empty empty empty 20 12 0 14 -207232 -66577
 0;
 #X obj 217 278 sig~;
 #X msg 235 233 0;
-#X obj 121 167 bng 15 50 10 0 empty empty empty 17 7 0 10 -128992 -4034
+#X obj 40 150 bng 15 50 10 0 empty empty empty 17 7 0 10 -128992 -4034
 -1;
 #X obj 201 -4 inlet~ in;
 #X obj 214 327 outlet~ out;

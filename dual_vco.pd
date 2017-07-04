@@ -1,4 +1,4 @@
-#N canvas 2 22 987 815 10;
+#N canvas 2 22 955 1027 10;
 #N canvas 992 84 450 300 midi_input 0;
 #X obj -80 8 notein;
 #X obj -81 194 mtof;
@@ -173,7 +173,6 @@
 #X connect 64 0 7 1;
 #X connect 64 0 25 0;
 #X connect 65 0 39 0;
-#X connect 65 0 42 0;
 #X restore 11 231 pd vcocore;
 #N canvas 0 50 450 300 vcocore 0;
 #X obj 377 47 inlet~ pwm;
@@ -318,16 +317,15 @@
 #X connect 64 0 7 1;
 #X connect 64 0 25 0;
 #X connect 65 0 39 0;
-#X connect 65 0 42 0;
 #X restore 254 79 pd vcocore;
 #X obj 322 142 vsl 15 128 0 5000 0 0 empty \$0-modulator-level mod-level
-0 -9 0 10 -262144 -1 -1 1500 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 255 281 *~;
 #X obj 172 175 vsl 15 90 0.13 6000 0 0 empty \$0-carrier-fq carrier-fq
-0 -9 0 10 -262144 -1 -1 500 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 59 -39 +~;
 #X obj 273 175 vsl 15 90 0.1 8500 1 0 empty \$0-modulator-fq mod-fq
-0 -9 0 10 -262144 -1 -1 700 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 74 12 loadbang;
 #X msg 79 41 1, f 5;
 #N canvas 0 50 450 300 track 0;
@@ -365,7 +363,7 @@
 #X connect 14 1 13 0;
 #X restore 599 -61 pd track;
 #X obj 223 198 vsl 15 60 0 500 0 0 empty \$0-carrier-mod-level car-mod-lev
-0 -9 0 10 -262144 -1 -1 800 1;
+0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 242 -4 +~;
 #X obj 112 358 *~;
 #X obj -27 556 outlet~ output;
@@ -387,7 +385,7 @@
 #X text 101 100 carrier cv;
 #X obj -86 -310 inlet~ carrier_cv;
 #X obj 137 -308 inlet~ modulator_cv;
-#X text 223 99 mod cv;
+#X text 223 100 mod cv;
 #X obj 87 -69 r~ \$0-mod;
 #X obj 216 312 s \$0-mod-fq;
 #X obj 152 533 s~ \$0-carrier-mods-mod;
@@ -398,7 +396,7 @@
 #X obj 38 -110 +;
 #X obj 250 -69 r \$0-mod-fq;
 #X obj 244 -106 r \$0-frequency;
-#X text 349 99 fbk_amt;
+#X text 349 100 fbk_amt;
 #X obj 273 37 +~;
 #X floatatom 150 326 5 0 0 0 - - -, f 5;
 #X obj 742 -194 snapshot~;

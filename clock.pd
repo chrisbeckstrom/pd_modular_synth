@@ -1,14 +1,14 @@
-#N canvas 479 146 639 585 10;
+#N canvas 479 146 763 499 10;
 #X obj 100 116 cnv 15 60 120 empty empty empty 20 12 0 14 -203904 -66577
 0;
 #X obj 371 415 outlet~ out;
 #X obj 115 124 vsl 30 100 1000 50 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7100 1;
+-1 -1 400 1;
 #X obj 372 358 sig~;
-#X msg 391 186 1;
-#X msg 574 228 0;
-#X obj 421 75 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X msg 367 289 1;
+#X msg 550 331 0;
+#X obj 393 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 414 12 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 414 -15 loadbang;
@@ -16,7 +16,7 @@
 #X obj 415 38 metro;
 #X text 101 100 ##CLOCK##;
 #X text 101 234 out;
-#X obj 440 187 del 2;
+#X obj 416 290 del 2;
 #X connect 2 0 9 0;
 #X connect 2 0 10 1;
 #X connect 3 0 1 0;

@@ -1,5 +1,5 @@
-#N canvas 0 22 1440 792 10;
-#X obj 1086 1725 scope;
+#N canvas 0 22 1912 1027 10;
+#X obj 1247 1624 scope;
 #X obj 822 465 comparator;
 #X obj 688 363 lpg;
 #X obj 1664 1439 grains;
@@ -41,11 +41,14 @@
 #X obj 497 1267 rancv;
 #X obj 625 1267 rancv;
 #X obj 794 1676 rancv;
+#X obj 901 1757 reverb;
 #X connect 11 0 24 0;
 #X connect 16 1 27 0;
+#X connect 17 0 24 4;
 #X connect 24 0 23 0;
 #X connect 24 0 23 1;
 #X connect 37 0 11 0;
+#X connect 37 0 17 0;
 #X connect 38 2 37 0;
 #X connect 38 2 39 0;
 #X connect 38 2 40 0;
@@ -54,3 +57,4 @@
 #X connect 39 0 37 1;
 #X connect 40 0 37 2;
 #X connect 41 0 24 8;
+#X connect 42 0 24 2;
