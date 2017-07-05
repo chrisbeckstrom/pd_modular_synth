@@ -1,4 +1,4 @@
-#N canvas 119 22 955 1027 10;
+#N canvas 961 4 955 1027 10;
 #X obj 100 109 cnv 15 150 180 empty empty empty 20 12 0 14 -191407
 -262144 0;
 #X obj 364 336 pack;
@@ -45,7 +45,7 @@
 #X obj 114 186 vsl 22 90 2 1000 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 210 185 vsl 22 90 2 1000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4441 1;
+-1 -1 0 1;
 #X text 121 166 up;
 #X text 205 166 down;
 #X text 125 124 SLOPE GENERATOR;
@@ -79,10 +79,10 @@
 #X obj 601 198 * 100;
 #X floatatom 553 338 5 0 0 0 - - -, f 5;
 #X obj 707 207 * 500;
-#X text 102 100 gate;
-#X text 145 99 up;
-#X text 178 99 down;
-#X text 214 100 loop;
+#X text 102 109 gate;
+#X text 145 109 up;
+#X text 178 109 down;
+#X text 214 109 loop;
 #X text 100 285 out;
 #X obj 324 302 clip 0.01 1000;
 #X obj 521 303 clip 0.01 2000;

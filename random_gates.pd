@@ -6,44 +6,54 @@
 #X obj 10 122 outlet~;
 #X obj 18 79 sig~;
 #X text 110 -6 ## RANDOM GATES ##;
-#X obj 113 29 vsl 30 60 1 0 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2950 1;
-#X obj 85 230 metro;
-#X obj 83 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 113 29 vsl 30 60 300 2 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5150 1;
+#X obj 126 213 metro;
+#X obj 124 188 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X floatatom 108 202 5 0 0 0 - - -, f 5;
+#X floatatom 153 175 5 0 0 0 - - -, f 5;
 #X obj 28 -56 moses 0;
 #X msg 66 -1 1;
-#X msg 17 -3 0;
+#X msg 12 11 0;
 #X obj 146 37 tgl 40 0 empty empty empty 17 7 0 10 -228856 -258113
 -258113 0 1;
 #X text 114 12 rate;
 #X obj 9 -153 r \$0-bang;
-#X obj 87 253 s \$0-bang;
+#X obj 129 249 s \$0-bang;
 #X obj 190 28 vsl 30 60 1 -1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1475 1;
+-1 -1 850 1;
 #X text 191 12 prob;
 #X text 115 95 gate;
-#X obj 27 166 loadbang;
+#X obj 68 149 loadbang;
 #X msg 149 -76 0.5;
 #X obj 206 -112 loadbang;
+#X obj 33 -26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 73 -30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 232 141 5 0 0 0 - - -, f 5;
+#X floatatom 93 -86 5 0 0 0 - - -, f 5;
 #X connect 1 0 2 0;
 #X connect 2 0 10 0;
+#X connect 2 0 26 0;
 #X connect 4 0 3 0;
 #X connect 6 0 9 0;
 #X connect 7 0 16 0;
 #X connect 8 0 7 0;
 #X connect 9 0 7 1;
-#X connect 10 0 12 0;
-#X connect 10 1 11 0;
+#X connect 10 0 23 0;
+#X connect 10 1 24 0;
 #X connect 11 0 4 0;
 #X connect 11 0 13 0;
 #X connect 12 0 4 0;
 #X connect 12 0 13 0;
 #X connect 15 0 2 0;
 #X connect 17 0 10 1;
+#X connect 17 0 25 0;
 #X connect 20 0 8 0;
 #X connect 21 0 6 0;
 #X connect 21 0 17 0;
 #X connect 22 0 21 0;
+#X connect 23 0 12 0;
+#X connect 24 0 11 0;
 #X coords 0 -1 1 1 118 120 2 107 -6;

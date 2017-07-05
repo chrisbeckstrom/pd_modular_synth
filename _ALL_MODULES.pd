@@ -1,4 +1,4 @@
-#N canvas 229 22 955 1027 10;
+#N canvas 229 22 1912 1027 10;
 #X obj 1080 413 scope;
 #X obj 968 182 comparator;
 #X obj 607 165 lpg;

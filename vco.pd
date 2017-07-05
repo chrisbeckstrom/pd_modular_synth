@@ -1,4 +1,4 @@
-#N canvas 641 4 638 1027 10;
+#N canvas 641 4 955 1027 10;
 #X obj 415 443 outlet~ sine;
 #X obj 338 30 inlet~ CV_in;
 #X obj 523 438 outlet~ saw;
@@ -7,19 +7,17 @@
 #X obj 100 105 cnv 15 123 190 empty empty empty 20 12 0 14 -258789
 -66577 0;
 #X obj 111 169 vsl 30 100 0.1 12000 1 0 empty empty empty 0 -9 0 10
--262017 -258789 -1 7250 1;
+-262017 -258789 -1 7550 1;
 #X text 100 148 freq;
 #X text 100 282 sine;
 #X obj 178 167 vsl 30 100 0 1 0 0 empty empty empty 0 -9 0 10 -262017
--258789 -1 4750 1;
+-258789 -1 4950 1;
 #X text 178 147 width;
 #X text 134 282 saw;
 #X text 164 282 rec;
 #X text 198 282 tri;
 #X obj 231 22 loadbang;
 #X msg 262 91 0.5;
-#X obj 660 383 bng 15 100 10 0 empty empty empty 17 7 0 10 -99865 -258113
--258113;
 #X text 102 117 ####### VCO #######;
 #X text 337 11 from -1 to 1;
 #X obj 493 237 snapshot~;
@@ -40,23 +38,22 @@
 #X obj 395 382 delwrite~ \$0-sine;
 #X obj 406 412 delread~ \$0-sine;
 #X msg 15 39 60;
-#X connect 1 0 31 0;
-#X connect 6 0 28 0;
-#X connect 9 0 28 2;
+#X connect 1 0 30 0;
+#X connect 6 0 27 0;
+#X connect 9 0 27 2;
 #X connect 14 0 15 0;
-#X connect 14 0 35 0;
+#X connect 14 0 34 0;
 #X connect 15 0 9 0;
-#X connect 19 0 28 1;
-#X connect 20 0 22 0;
-#X connect 21 0 20 0;
-#X connect 22 0 19 0;
-#X connect 27 0 19 0;
-#X connect 28 0 33 0;
-#X connect 28 1 2 0;
-#X connect 28 2 3 0;
-#X connect 28 3 16 0;
-#X connect 28 4 4 0;
-#X connect 32 0 27 0;
-#X connect 34 0 0 0;
-#X connect 35 0 6 0;
+#X connect 18 0 27 1;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 18 0;
+#X connect 26 0 18 0;
+#X connect 27 0 32 0;
+#X connect 27 1 2 0;
+#X connect 27 2 3 0;
+#X connect 27 4 4 0;
+#X connect 31 0 26 0;
+#X connect 33 0 0 0;
+#X connect 34 0 6 0;
 #X coords 0 -1 1 1 125 200 2 100 100;

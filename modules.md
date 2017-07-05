@@ -12,6 +12,7 @@ wavetable
 
 ## VCA/mixing
 vca
+amp (vc amplifier)
 mixer
 attenuvert
 
