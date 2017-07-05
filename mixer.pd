@@ -3,7 +3,7 @@
 #X obj 102 117 cnv 15 196 171 empty empty empty 20 12 0 14 -86853 -66577
 0;
 #X obj 107 133 vsl 25 130 0 1 0 0 empty empty empty 0 -9 0 10 -99865
--4034 -1 2050 1;
+-4034 -1 0 1;
 #X obj 430 312 +~;
 #X obj 23 34 loadbang;
 #X obj 351 59 inlet~ one;
@@ -12,9 +12,9 @@
 #X obj 393 715 outlet~ out;
 #X obj 402 517 *~;
 #X obj 271 132 vsl 25 130 0 1 0 0 empty empty empty 0 -9 0 10 -99865
--4034 -1 0 1;
+-4034 -1 12900 1;
 #X obj 147 134 vsl 25 130 0 1 0 0 empty empty empty 0 -9 0 10 -99865
--4034 -1 2200 1;
+-4034 -1 0 1;
 #X obj 586 365 *~;
 #X obj 625 311 +~;
 #X obj 546 58 inlet~ two;
@@ -49,10 +49,9 @@
 #X obj 393 638 clip~ -1 1;
 #X obj 125 435 abs~;
 #X floatatom 118 365 5 0 0 0 - - -, f 5;
-#N canvas 0 22 450 300 chooser 0;
+#N canvas 0 22 635 1027 chooser 0;
 #X obj 174 39 inlet~ input2;
 #X obj 309 38 inlet choose;
-#X floatatom 312 78 5 0 0 0 - - -, f 5;
 #X obj 69 182 *~;
 #X msg 296 170 1;
 #X obj 134 264 outlet~ output;
@@ -60,42 +59,34 @@
 #X msg 296 200 0;
 #X msg 343 164 1;
 #X msg 349 194 0;
-#X obj 393 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 272 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 37 78 inlet~ input1;
 #X obj 311 118 select 0;
 #X obj 110 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 217 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 0 0 6 0;
-#X connect 1 0 2 0;
-#X connect 2 0 13 0;
-#X connect 3 0 5 0;
-#X connect 4 0 14 0;
-#X connect 6 0 5 0;
-#X connect 7 0 14 0;
-#X connect 8 0 15 0;
-#X connect 9 0 15 0;
-#X connect 12 0 3 0;
-#X connect 13 0 4 0;
-#X connect 13 0 9 0;
-#X connect 13 0 11 0;
-#X connect 13 1 8 0;
-#X connect 13 1 7 0;
-#X connect 13 1 10 0;
-#X connect 14 0 3 1;
-#X connect 15 0 6 1;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 12 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 0 8 0;
+#X connect 10 1 7 0;
+#X connect 10 1 6 0;
+#X connect 11 0 2 1;
+#X connect 12 0 5 1;
 #X restore 348 201 pd chooser;
 #X obj 383 119 *~ -1;
 #X obj 106 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 0 22 450 300 chooser 0;
+#N canvas 0 22 635 1027 chooser 0;
 #X obj 174 39 inlet~ input2;
 #X obj 309 38 inlet choose;
-#X floatatom 312 78 5 0 0 0 - - -, f 5;
 #X obj 69 182 *~;
 #X msg 296 170 1;
 #X obj 130 257 outlet~ output;
@@ -103,42 +94,34 @@
 #X msg 296 200 0;
 #X msg 343 164 1;
 #X msg 349 194 0;
-#X obj 393 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 272 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 37 78 inlet~ input1;
 #X obj 311 118 select 0;
 #X obj 110 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 217 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 0 0 6 0;
-#X connect 1 0 2 0;
-#X connect 2 0 13 0;
-#X connect 3 0 5 0;
-#X connect 4 0 14 0;
-#X connect 6 0 5 0;
-#X connect 7 0 14 0;
-#X connect 8 0 15 0;
-#X connect 9 0 15 0;
-#X connect 12 0 3 0;
-#X connect 13 0 4 0;
-#X connect 13 0 9 0;
-#X connect 13 0 11 0;
-#X connect 13 1 8 0;
-#X connect 13 1 7 0;
-#X connect 13 1 10 0;
-#X connect 14 0 3 1;
-#X connect 15 0 6 1;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 12 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 0 8 0;
+#X connect 10 1 7 0;
+#X connect 10 1 6 0;
+#X connect 11 0 2 1;
+#X connect 12 0 5 1;
 #X restore 554 195 pd chooser;
 #X obj 589 113 *~ -1;
 #X obj 148 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 0 22 450 300 chooser 0;
+#N canvas 0 22 635 1027 chooser 0;
 #X obj 174 39 inlet~ input2;
 #X obj 309 38 inlet choose;
-#X floatatom 312 78 5 0 0 0 - - -, f 5;
 #X obj 69 182 *~;
 #X msg 296 170 1;
 #X obj 130 257 outlet~ output;
@@ -146,42 +129,34 @@
 #X msg 296 200 0;
 #X msg 343 164 1;
 #X msg 349 194 0;
-#X obj 393 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 272 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 37 78 inlet~ input1;
 #X obj 311 118 select 0;
 #X obj 110 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 217 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 0 0 6 0;
-#X connect 1 0 2 0;
-#X connect 2 0 13 0;
-#X connect 3 0 5 0;
-#X connect 4 0 14 0;
-#X connect 6 0 5 0;
-#X connect 7 0 14 0;
-#X connect 8 0 15 0;
-#X connect 9 0 15 0;
-#X connect 12 0 3 0;
-#X connect 13 0 4 0;
-#X connect 13 0 9 0;
-#X connect 13 0 11 0;
-#X connect 13 1 8 0;
-#X connect 13 1 7 0;
-#X connect 13 1 10 0;
-#X connect 14 0 3 1;
-#X connect 15 0 6 1;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 12 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 0 8 0;
+#X connect 10 1 7 0;
+#X connect 10 1 6 0;
+#X connect 11 0 2 1;
+#X connect 12 0 5 1;
 #X restore 722 195 pd chooser;
 #X obj 757 113 *~ -1;
 #X obj 201 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 0 22 450 300 chooser 0;
+#N canvas 0 22 635 1027 chooser 0;
 #X obj 174 39 inlet~ input2;
 #X obj 309 38 inlet choose;
-#X floatatom 312 78 5 0 0 0 - - -, f 5;
 #X obj 69 182 *~;
 #X msg 296 170 1;
 #X obj 130 257 outlet~ output;
@@ -189,42 +164,34 @@
 #X msg 296 200 0;
 #X msg 343 164 1;
 #X msg 349 194 0;
-#X obj 393 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 272 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 37 78 inlet~ input1;
 #X obj 311 118 select 0;
 #X obj 110 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 217 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 0 0 6 0;
-#X connect 1 0 2 0;
-#X connect 2 0 13 0;
-#X connect 3 0 5 0;
-#X connect 4 0 14 0;
-#X connect 6 0 5 0;
-#X connect 7 0 14 0;
-#X connect 8 0 15 0;
-#X connect 9 0 15 0;
-#X connect 12 0 3 0;
-#X connect 13 0 4 0;
-#X connect 13 0 9 0;
-#X connect 13 0 11 0;
-#X connect 13 1 8 0;
-#X connect 13 1 7 0;
-#X connect 13 1 10 0;
-#X connect 14 0 3 1;
-#X connect 15 0 6 1;
-#X restore 922 196 pd chooser;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 12 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 0 8 0;
+#X connect 10 1 7 0;
+#X connect 10 1 6 0;
+#X connect 11 0 2 1;
+#X connect 12 0 5 1;
+#X restore 903 193 pd chooser;
 #X obj 957 114 *~ -1;
 #X obj 242 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 0 22 450 300 chooser 0;
+#N canvas 0 22 635 1027 chooser 0;
 #X obj 174 39 inlet~ input2;
 #X obj 309 38 inlet choose;
-#X floatatom 312 78 5 0 0 0 - - -, f 5;
 #X obj 69 182 *~;
 #X msg 296 170 1;
 #X obj 130 257 outlet~ output;
@@ -232,34 +199,27 @@
 #X msg 296 200 0;
 #X msg 343 164 1;
 #X msg 349 194 0;
-#X obj 393 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 272 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 37 78 inlet~ input1;
 #X obj 311 118 select 0;
 #X obj 110 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 217 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 0 0 6 0;
-#X connect 1 0 2 0;
-#X connect 2 0 13 0;
-#X connect 3 0 5 0;
-#X connect 4 0 14 0;
-#X connect 6 0 5 0;
-#X connect 7 0 14 0;
-#X connect 8 0 15 0;
-#X connect 9 0 15 0;
-#X connect 12 0 3 0;
-#X connect 13 0 4 0;
-#X connect 13 0 9 0;
-#X connect 13 0 11 0;
-#X connect 13 1 8 0;
-#X connect 13 1 7 0;
-#X connect 13 1 10 0;
-#X connect 14 0 3 1;
-#X connect 15 0 6 1;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 12 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 0 8 0;
+#X connect 10 1 7 0;
+#X connect 10 1 6 0;
+#X connect 11 0 2 1;
+#X connect 12 0 5 1;
 #X restore 410 594 pd chooser;
 #X obj 463 558 *~ -1;
 #X obj 282 269 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0

@@ -1,0 +1,6 @@
+#N canvas 710 340 955 1027 10;
+#X obj 322 280 noise~;
+#X obj 321 328 outlet~;
+#X text 107 102 ## NOISE ##;
+#X connect 0 0 1 0;
+#X coords 0 -1 1 1 83 25 2 100 100;
