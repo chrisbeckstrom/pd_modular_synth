@@ -1,16 +1,16 @@
-#N canvas 901 61 475 667 10;
+#N canvas 778 22 484 751 10;
 #X obj 10 27 vsl 100 300 -1 1 0 0 \$0-osc1 \$0-vsl-in empty 0 -9 0
-10 -220534 -4928 -1 9500 1;
-#X obj 10 347 bng 51 250 50 0 \$0-connect-cbair empty empty 17 7 0
+10 -262144 -4928 -1 16200 1;
+#X obj 10 341 bng 51 250 50 0 \$0-connect-cbair empty empty 17 7 0
 10 -262144 -1 -1;
-#X obj 396 355 bng 51 250 50 0 \$0-disconnect empty empty 17 7 0 10
+#X obj 396 341 bng 51 250 50 0 \$0-disconnect empty empty 17 7 0 10
 -262144 -1 -1;
-#X text 399 404 disconnect;
+#X text 399 390 disconnect;
 #X obj 86 3 tgl 19 0 empty \$0-status empty 17 7 0 10 -262144 -1 -1
 1 1;
-#X text 8 396 connect cbair;
-#N canvas 679 173 757 602 guts 0;
-#X msg 424 363 disconnect;
+#X text 8 390 connect cbair;
+#N canvas 15 22 757 602 guts 0;
+#X msg 436 374 disconnect;
 #X obj 281 180 key;
 #X obj 281 206 spigot;
 #X obj 314 181 tgl 15 0 empty empty send_keys 17 7 0 10 -262144 -1
@@ -31,24 +31,34 @@
 #X restore 281 325 pd oscsend;
 #X obj 281 351 tgl 15 0 empty empty connected 17 7 0 10 -262144 -1
 -1 1 1;
-#X symbolatom 425 221 20 0 0 0 - - -, f 20;
-#X msg 425 245 connect \$1 8088;
-#X obj 425 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 446 195 type hostname/ip below and hit enter;
-#X msg 425 270 connect 127.0.0.1 9020;
-#X obj 433 340 r \$0-disconnect;
+#X symbolatom 451 90 20 0 0 0 - - -, f 20;
+#X msg 451 114 connect \$1 8088;
+#X obj 451 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 472 64 type hostname/ip below and hit enter;
+#X msg 451 139 connect 127.0.0.1 9020;
+#X obj 436 351 r \$0-disconnect;
 #X obj 207 351 s \$0-status;
-#X obj 443 292 r \$0-connect-cbair;
-#X msg 422 317 connect cb-air.local 8888;
-#X obj 53 97 r \$0-osc1;
-#X obj 53 121 oscformat osc1;
-#X obj 61 153 r \$0-osc2;
-#X obj 61 177 oscformat osc2;
-#X obj 2 200 r \$0-osc3;
-#X obj 1 224 oscformat osc3;
-#X obj 67 269 r \$0-osc4;
-#X obj 66 293 oscformat osc4;
+#X obj 454 194 r \$0-connect-cbair;
+#X msg 454 219 connect cb-air.local 8888;
+#X obj 71 21 r \$0-osc1;
+#X obj 71 45 oscformat osc1;
+#X obj 71 73 r \$0-osc2;
+#X obj 71 97 oscformat osc2;
+#X obj 71 126 r \$0-osc3;
+#X obj 71 150 oscformat osc3;
+#X obj 71 180 r \$0-osc4;
+#X obj 71 204 oscformat osc4;
+#X obj 454 260 r \$0-connect-studio;
+#X msg 454 285 connect 10.0.0.10 8888;
+#X obj 69 234 r \$0-osc5;
+#X obj 69 258 oscformat osc5;
+#X obj 69 310 oscformat osc6;
+#X obj 69 286 r \$0-osc6;
+#X obj 69 339 r \$0-osc7;
+#X obj 69 363 oscformat osc7;
+#X obj 69 393 r \$0-osc8;
+#X obj 69 417 oscformat osc8;
 #X connect 0 0 5 1;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
@@ -71,11 +81,32 @@
 #X connect 21 0 5 0;
 #X connect 22 0 23 0;
 #X connect 23 0 5 0;
+#X connect 24 0 25 0;
+#X connect 25 0 5 1;
+#X connect 26 0 27 0;
+#X connect 27 0 5 0;
+#X connect 28 0 5 0;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 31 0 5 0;
+#X connect 32 0 33 0;
+#X connect 33 0 5 0;
 #X restore 137 4 pd guts;
 #X obj 118 27 vsl 100 300 -1 1 0 0 \$0-osc2 empty empty 0 -9 0 10 -262017
--260353 -1 22650 1;
+-260353 -1 3900 1;
 #X text 22 3 connected:;
 #X obj 228 27 vsl 100 300 -1 1 0 0 \$0-osc3 empty empty 0 -9 0 10 -4928
--262144 -1 13600 1;
+-262144 -1 0 1;
 #X obj 338 27 vsl 100 300 -1 1 0 0 \$0-osc4 empty empty 0 -9 0 10 -1381
--2432 -1 12900 1;
+-2432 -1 0 1;
+#X obj 116 341 bng 51 250 50 0 \$0-connect-studio empty empty 17 7
+0 10 -262144 -1 -1;
+#X text 114 390 connect studio;
+#X obj 9 410 vsl 100 300 -1 1 0 0 \$0-osc5 empty empty 0 -9 0 10 -262017
+-260353 -1 0 1;
+#X obj 117 410 vsl 100 300 -1 1 0 0 \$0-osc6 empty empty 0 -9 0 10
+-258625 -262144 -1 0 1;
+#X obj 227 410 vsl 100 300 -1 1 0 0 \$0-osc7 empty empty 0 -9 0 10
+-80065 -3969 -1 0 1;
+#X obj 337 410 vsl 100 300 -1 1 0 0 \$0-osc8 empty empty 0 -9 0 10
+-82341 -262144 -1 0 1;
