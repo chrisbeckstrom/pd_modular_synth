@@ -1,0 +1,78 @@
+#N canvas 113 28 796 481 10;
+#X obj 81 100 unpackOSC;
+#X obj 77 146 route /osc1;
+#X obj 157 146 route /osc2;
+#X obj 239 146 route /osc3;
+#X obj 322 146 route /osc4;
+#X obj 77 205 sig~;
+#X obj 77 235 outlet~ a;
+#X obj 157 206 sig~;
+#X obj 239 205 sig~;
+#X obj 322 206 sig~;
+#X obj 157 236 outlet~ b;
+#X obj 239 235 outlet~ c;
+#X obj 322 236 outlet~ d;
+#X text 293 8 ## OSC RECEIVER ##;
+#X floatatom 294 54 3 0 0 0 - - -, f 3;
+#X floatatom 321 54 3 0 0 0 - - -, f 3;
+#X floatatom 348 54 3 0 0 0 - - -, f 3;
+#X floatatom 375 54 3 0 0 0 - - -, f 3;
+#X floatatom 402 54 5 0 0 0 - - -, f 5;
+#X obj 523 30 unpack 0 0 0 0 0;
+#X obj 668 63 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
+#X floatatom 387 31 9 0 0 0 - - -, f 9;
+#X text 254 31 total bytes received:;
+#X text 254 54 from:;
+#X obj 355 -38 route received total from multicast;
+#X obj 81 67 udpreceive 9005;
+#X obj 16 179 print;
+#X msg 81 29 status;
+#X obj 81 -3 metro 300;
+#X obj 81 -28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 81 -58 loadbang;
+#X text 253 105 /osc1;
+#X obj 311 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 302 105 /osc2;
+#X text 354 105 /osc3;
+#X text 401 105 /osc4;
+#X obj 267 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 362 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 407 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 1 0 36 0;
+#X connect 2 0 7 0;
+#X connect 2 0 26 0;
+#X connect 2 0 32 0;
+#X connect 3 0 8 0;
+#X connect 3 0 37 0;
+#X connect 4 0 9 0;
+#X connect 4 0 38 0;
+#X connect 5 0 6 0;
+#X connect 7 0 10 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 19 0 14 0;
+#X connect 19 1 15 0;
+#X connect 19 2 16 0;
+#X connect 19 3 17 0;
+#X connect 19 4 18 0;
+#X connect 24 1 21 0;
+#X connect 24 2 19 0;
+#X connect 24 3 20 0;
+#X connect 25 0 0 0;
+#X connect 25 1 24 0;
+#X connect 27 0 25 0;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;
+#X coords 0 -1 1 1 194 123 2 251 6;
