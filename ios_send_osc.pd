@@ -1,0 +1,81 @@
+#N canvas 901 61 475 667 10;
+#X obj 10 27 vsl 100 300 -1 1 0 0 \$0-osc1 \$0-vsl-in empty 0 -9 0
+10 -220534 -4928 -1 9500 1;
+#X obj 10 347 bng 51 250 50 0 \$0-connect-cbair empty empty 17 7 0
+10 -262144 -1 -1;
+#X obj 396 355 bng 51 250 50 0 \$0-disconnect empty empty 17 7 0 10
+-262144 -1 -1;
+#X text 399 404 disconnect;
+#X obj 86 3 tgl 19 0 empty \$0-status empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X text 8 396 connect cbair;
+#N canvas 679 173 757 602 guts 0;
+#X msg 424 363 disconnect;
+#X obj 281 180 key;
+#X obj 281 206 spigot;
+#X obj 314 181 tgl 15 0 empty empty send_keys 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 281 236 oscformat pd key;
+#N canvas 0 23 356 247 oscsend 0;
+#X obj 71 59 inlet;
+#X obj 71 146 netsend -u -b;
+#X obj 71 119 list trim;
+#X obj 71 92 list prepend send;
+#X obj 71 174 outlet;
+#X obj 201 119 inlet;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 1 0;
+#X restore 281 325 pd oscsend;
+#X obj 281 351 tgl 15 0 empty empty connected 17 7 0 10 -262144 -1
+-1 1 1;
+#X symbolatom 425 221 20 0 0 0 - - -, f 20;
+#X msg 425 245 connect \$1 8088;
+#X obj 425 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 446 195 type hostname/ip below and hit enter;
+#X msg 425 270 connect 127.0.0.1 9020;
+#X obj 433 340 r \$0-disconnect;
+#X obj 207 351 s \$0-status;
+#X obj 443 292 r \$0-connect-cbair;
+#X msg 422 317 connect cb-air.local 8888;
+#X obj 53 97 r \$0-osc1;
+#X obj 53 121 oscformat osc1;
+#X obj 61 153 r \$0-osc2;
+#X obj 61 177 oscformat osc2;
+#X obj 2 200 r \$0-osc3;
+#X obj 1 224 oscformat osc3;
+#X obj 67 269 r \$0-osc4;
+#X obj 66 293 oscformat osc4;
+#X connect 0 0 5 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 13 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 1;
+#X connect 9 0 7 0;
+#X connect 11 0 5 1;
+#X connect 12 0 0 0;
+#X connect 14 0 15 0;
+#X connect 15 0 5 1;
+#X connect 16 0 17 0;
+#X connect 17 0 5 0;
+#X connect 18 0 19 0;
+#X connect 19 0 5 0;
+#X connect 20 0 21 0;
+#X connect 21 0 5 0;
+#X connect 22 0 23 0;
+#X connect 23 0 5 0;
+#X restore 137 4 pd guts;
+#X obj 118 27 vsl 100 300 -1 1 0 0 \$0-osc2 empty empty 0 -9 0 10 -262017
+-260353 -1 22650 1;
+#X text 22 3 connected:;
+#X obj 228 27 vsl 100 300 -1 1 0 0 \$0-osc3 empty empty 0 -9 0 10 -4928
+-262144 -1 13600 1;
+#X obj 338 27 vsl 100 300 -1 1 0 0 \$0-osc4 empty empty 0 -9 0 10 -1381
+-2432 -1 12900 1;
