@@ -1,0 +1,12 @@
+#N canvas 722 97 702 583 10;
+#X obj 147 254 a_vco;
+#X obj 98 457 dac~;
+#X obj 50 -4 vca;
+#X obj 130 -96 rancv;
+#X obj 346 -196 clock;
+#X obj 150 133 quantizer;
+#X connect 0 0 1 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
