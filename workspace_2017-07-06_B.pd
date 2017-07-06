@@ -1,0 +1,16 @@
+#N canvas 217 22 1223 792 10;
+#X obj 445 259 grain_delay;
+#X obj 450 466 dac~;
+#X obj 467 133 adc~;
+#X obj 190 17 vco;
+#X obj 77 240 clock;
+#X obj 341 175 vca;
+#X obj 191 283 lpg;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 0 0;
+#X connect 2 1 0 0;
+#X connect 3 3 6 0;
+#X connect 4 0 6 1;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
