@@ -1,4 +1,4 @@
-#N canvas 1345 4 571 1027 10;
+#N canvas 257 23 571 828 10;
 #X obj 39 26 inlet~;
 #X obj 263 579 outlet midi;
 #X obj 79 134 snapshot~;
@@ -23,6 +23,13 @@
 #X text 50 556 cv in;
 #X text 52 601 midi note out;
 #X text 129 559 CV to MIDI;
+#X obj 213 480 makenote;
+#X obj 224 511 noteout;
+#X msg 235 394 100;
+#X obj 363 60 threshold~ 0.1 1 1 1;
+#X obj 368 29 inlet~ trig;
+#X obj 291 388 del 5;
+#X msg 274 430 0;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 11 0;
@@ -36,4 +43,12 @@
 #X connect 13 0 14 0;
 #X connect 14 0 8 0;
 #X connect 19 0 9 0;
+#X connect 19 0 23 0;
+#X connect 23 0 24 0;
+#X connect 23 1 24 1;
+#X connect 25 0 23 1;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;
+#X connect 28 0 29 0;
+#X connect 29 0 23 1;
 #X coords 0 -1 1 1 151 70 2 48 555;

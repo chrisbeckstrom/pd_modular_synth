@@ -1,0 +1,8 @@
+#N canvas 106 59 790 761 10;
+#X obj 204 97 random_midi3;
+#X obj 48 7 clock;
+#X obj 232 486 cv2midi;
+#X obj 407 -145 vco;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 2 0 1;

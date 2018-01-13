@@ -1,0 +1,9 @@
+#N canvas 81 23 956 537 10;
+#X obj 258 400 ctlout 10;
+#X obj 270 151 osc~ 0.5;
+#X obj 257 356 cv_to_midi;
+#X obj 423 43 seq2;
+#X obj 262 -24 clock;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;

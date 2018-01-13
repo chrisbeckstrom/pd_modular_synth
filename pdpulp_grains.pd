@@ -1,0 +1,8 @@
+#N canvas 0 23 1440 828 10;
+#X obj 1448 868 dac~;
+#X obj 1317 568 grains;
+#X obj 1253 406 adc~;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 2 1 1 0;

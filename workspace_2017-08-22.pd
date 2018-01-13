@@ -1,0 +1,15 @@
+#N canvas 0 23 1440 828 10;
+#X obj 1386 344 a_sampler;
+#X obj 1448 868 dac~;
+#X obj 1244 17 clock;
+#X obj 1533 23 cvgen;
+#X obj 1350 222 rancv;
+#X obj 1511 628 mixer;
+#X obj 1658 175 r_osc;
+#X obj 804 21 vco;
+#X obj 988 6 a_vco;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 4 0;
+#X connect 6 1 0 2;
+#X connect 8 0 0 0;
